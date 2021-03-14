@@ -1,11 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><h1>Coffee Survey</h1></title>
+    <title>Coffee Survey</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-    <h1>Coffee Survey</h1>
+    <h1 id="title">Coffee Survey</h1>
+    <p id="description">
+    Thank you for participating in our Coffee Survey!
+    </p>
+    
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your Email"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input
+                type="number"
+                name="age"
+                id="number"
+                min="1"
+                max="150"
+                class="form-control"
+                placeholder="Age"
+            />
+        </div>
+
+        <div class="form-group">
+            <p>Are you tea or coffee person?</p>
+            <label>
+            <input
+                name="tea-or-coffee"
+                value="coffee"
+                type="radio"
+                class="input-radio"
+                checked
+            />
+            Coffee
+            </label>
+            <label>
+            <input
+                name="tea-or-coffee"
+                value="tea"
+                type="radio"
+                class="input-radio"
+            />
+            Tea
+            </label>
+            <label>
+            <input
+                name="tea-or-coffee"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+            />
+            Not sure
+            </label>  
+            <label>
+            <input
+                name="tea-or-coffee"
+                value="none"
+                type="radio"
+                class="input-radio"
+            />
+            None
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label id="how-many-coffees" for="how-many-coffees">
+                How many times per day do you drink coffee?
+            </label>
+            <input
+                type="number"
+                name="how-many-coffees"
+                id="number"
+                min="0"
+                max="10"
+                class="form-control"
+            />
+        </div>
+
+        <div class="form-group">
+            <p>What is your favorite coffee?</p>
+            <select id="dropdown" name="coffee" class="form-control" required>
+                <option disabled selected value>
+                    Select your favorite coffee
+                </option>
+                <option value="espresso">
+                    Espresso,Ristretto or Lungo
+                </option>
+                <option value="americano">Americano</option>
+                <option value="flatwhite">Flat White</option>
+                <option value="cappuccino">Cappuccino</option>
+                <option value="latte">Latte</option>
+                <option value="irish">Irish Coffee</option>
+                <option value="mocha">Mocha</option>
+                <option value="frappe">Frappe</option>
+                <option value="icedlatte">Iced Latte</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p>What flavour do you like to add to your coffee?</p>
+            <label>   
+            <input
+                name="flavour"
+                value="vanilla"
+                type="checkbox"
+                class="input-checkbox"
+            />
+            Vanilla
+            </label>
+            <label>   
+            <input
+                name="flavour"
+                value="caramel/toffee"
+                type="checkbox"
+                class="input-checkbox"
+            />
+            Caramel/Toffee
+            </label>
+            <label>   
+            <input
+                name="flavour"
+                value="chocolate"
+                type="checkbox"
+                class="input-checkbox"
+            />
+            Chocolate
+            </label>
+            <label>   
+            <input
+                name="flavour"
+                value="other"
+                type="checkbox"
+                class="input-checkbox"
+            />
+            Other
+            </label>
+        </div>
+
+        <div class="form-group">
+            <p>What flavoured coffee would you want to try?</p>
+            <textarea
+                id="suggestion"
+                class="input-textarea"
+                name="suggestion"
+                placeholder="Enter your comment here..."
+            >
+            </textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
 </body>
 </html>
