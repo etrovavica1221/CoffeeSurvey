@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,7 +11,6 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: aqua;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 0.7em;
     background: url("./coffees-bcg.jpeg");
@@ -19,14 +18,50 @@ body {
     background-size: cover;
 }
 
-#title {
-    margin: 0.3em auto;
-    font-family: 'Kaushan Script', cursive;
-    font-weight: bold;
-    font-size: 2.7rem;
+p {
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-bottom: 1.1em;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+    margin-bottom: 0.1em;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1.5em;
+}
+
+input {
+    line-height: 1.6;
+}    
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    margin: 0.6em auto;
+    border-radius: 4px;
+}    
+
+.input-radio, .input-checkbox {
+    width: auto;
+}
+
+.list-label {
+    font-size: 1em;
 }
 
 .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,30 +71,62 @@ body {
     padding: 0;
     background-color: rgba(222, 184, 135, 0.39);
     border-radius: 3px;
-}
+}    
 
-.form-control {
-    margin: 0.6em auto;
+#title {
+    margin: 0.3em auto;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: bold;
+    font-size: 2.7rem;
+    color: rgb(43, 31, 6);
+    text-shadow: 2px 2px 5px rgba(238, 177, 124, 0.658);
+}    
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+    width: 90%;
 }
 
 #submit {
-    margin: 0.7em auto;
-    border-radius: 4px;
-    font-size: 1.1rem;
-}
-
-label {
     display: flex;
     align-items: center;
-    font-size: 1em;
-    margin-bottom: 0.1em;
+    justify-content: center;
+    width: 40%;
+    margin: 0.7em auto;
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    background-color: rgba(43, 31, 6, 0.452);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
-input, textarea {
+#submit:hover {
+    background-color: rgba(43, 31, 6, 0.652);
+}
+
+#dropdown {
+    height: 2rem;
     border-radius: 4px;
-    font-size: 1.5em;
+}
+
+#number {
+    max-width: 4rem;
 }
 
 #suggestion {
-    width: 100%;
+    max-width: 100%;
 }
+
+#description {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+
+
